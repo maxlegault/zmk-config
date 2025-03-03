@@ -84,9 +84,9 @@
 // |  !  |  ^  |  =  |  _  |  $  |  ?  |   |     |     |     |     |     |     |
 // |  ~  |  <  |  |  |  -  |  >  |  *  |   |     |     |     |     |     |     |
 //                   |  %  |  :  |  @  |   |     |     |     |
-   &kp HASH  &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &AMPS      &trans &trans &trans &trans &trans &trans
-   &kp EXCL  &kp CARET &kp EQUAL &kp UNDER &kp DLLR  &QMARK     &trans &trans &trans &trans &trans &trans
-   &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT    &STAR      &trans &trans &trans &trans &trans &trans
+   &kp HASH  &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &kp AMPS      &trans &trans &trans &trans &trans &trans
+   &kp EXCL  &kp CARET &kp EQUAL &kp UNDER &kp DLLR  &kp QMARK     &trans &trans &trans &trans &trans &trans
+   &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT    &kp STAR      &trans &trans &trans &trans &trans &trans
                                  &kp PRCNT &kp COLON &kp AT     &trans &trans &trans
                         >;
                 };
