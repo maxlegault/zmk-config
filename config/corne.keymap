@@ -35,7 +35,7 @@
    &kp TAB   &kp Q       &kp W      &kp F      &kp P       &kp B          &kp J       &kp L       &kp U      &kp Y      &kp SEMI    &kp MINUS
    &kp ESC   &mt LCTRL A &mt LALT R &mt LGUI S &mt LSHFT T &kp G          &kp M       &mt RSHFT N &mt RGUI E &mt RALT I &mt RCTRL O &kp SQT
    &kp GRAVE &kp Z       &kp X      &kp C      &kp D       &kp V          &kp K       &kp H       &kp COMMA  &kp DOT    &kp FSLH    &kp BSLH
-                                    &td0       &lt 2 DEL   &lt 1 BSPC     &lt 4 SPACE &kp RET     &lt 5 TAB
+                                    &td0       &lt 1 BSPC  &lt 2 DEL      &kp RET     &lt 4 SPACE &lt 5 TAB
                         >;
                 };
                 navigation_layer {
@@ -45,7 +45,7 @@
 // |     |     | LEFT | DOWN | RGHT |     |   |  H  |  J  |  K  |  L  |     |    |
 // |     |     |      |      |      |     |   |     |     |     |     |     |    |
 //                    |      |      |     |   |     |     |     |
-   &trans &trans &trans   &trans   &trans    &trans     &trans &kp PG_DN &kp PG_UP &kp HOME &kp END &trans
+   &trans &trans &trans   &kp UP   &trans    &trans     &trans &kp PG_DN &kp PG_UP &kp HOME &kp END &trans
    &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans     &kp H  &kp J     &kp K     &kp L    &trans  &trans
    &trans &trans &trans   &trans   &trans    &trans     &trans &trans    &trans    &trans   &trans  &trans
                           &trans   &trans    &trans     &trans &trans    &trans
@@ -58,10 +58,10 @@
 // |     |     |     |     |     |     |   |     |  4  |  5  |  6  |     |    |
 // |     |     |     |     |     |     |   |     |  1  |  2  |  3  |     |    |
 //                   |     |     |     |   |  0  |     |     |
-   &trans &trans &trans &trans &trans &trans     &trans &kp 7  &kp 8  &kp 9 &trans &trans
-   &trans &trans &trans &trans &trans &trans     &trans &kp 4  &kp 5  &kp 6 &trans &trans
-   &trans &trans &trans &trans &trans &trans     &trans &kp 1  &kp 2  &kp 3 &trans &trans
-                        &trans &trans &trans     &kp 0  &trans &trans
+   &trans &trans &trans &trans &trans &trans     &trans &kp N7  &kp N8  &kp N9 &trans &trans
+   &trans &trans &trans &trans &trans &trans     &trans &kp N4  &kp N5  &kp N6 &trans &trans
+   &trans &trans &trans &trans &trans &trans     &trans &kp N1  &kp N2  &kp N3 &trans &trans
+                        &trans &trans &trans     &kp N0  &trans &trans
                         >;
                 };
                 function_layer {
