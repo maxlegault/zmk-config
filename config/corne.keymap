@@ -32,10 +32,10 @@
 // | SHFT |  Z  |  X  |  C   |  D  |  V   |   |  K  |  H  |  ,   |  .  |  /  |  \  |
 //                    | CAPW | DEL | BSPC |   | SPC | RET | TAB  |
                         bindings = <
-   &kp TAB   &kp Q       &kp W      &kp F      &kp P       &kp B          &kp J       &kp L      &kp U      &kp Y       &kp SEMI &kp MINUS
-   &kp ESC   &mt LCTRL A &mt LALT R &mt LGUI S &mt LSHFT T &kp G          &mt RSHFT M &mt RGUI N &mt RALT E &mt RCTRL I &kp O    &kp SQT
-   &kp GRAVE &kp Z       &kp X      &kp C      &kp D       &kp V          &kp K       &kp H      &kp COMMA  &kp DOT     &kp FSLH &kp BSLH
-                                    &td0       &lt 2 DEL   &lt 1 BSPC     &lt 4 SPACE &kp RET    &lt 5 TAB
+   &kp TAB   &kp Q       &kp W      &kp F      &kp P       &kp B          &kp J       &kp L       &kp U      &kp Y      &kp SEMI    &kp MINUS
+   &kp ESC   &mt LCTRL A &mt LALT R &mt LGUI S &mt LSHFT T &kp G          &kp M       &mt RSHFT N &mt RGUI E &mt RALT I &mt RCTRL O &kp SQT
+   &kp GRAVE &kp Z       &kp X      &kp C      &kp D       &kp V          &kp K       &kp H       &kp COMMA  &kp DOT    &kp FSLH    &kp BSLH
+                                    &td0       &lt 2 DEL   &lt 1 BSPC     &lt 4 SPACE &kp RET     &lt 5 TAB
                         >;
                 };
                 navigation_layer {
