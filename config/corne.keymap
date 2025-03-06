@@ -80,14 +80,14 @@
                 symbol_layer {
                         bindings = <
 // -----------------------------------------------------------------------------------------
-// |  #  |  (  |  )  |  [  |  ]  |  &  |   |     |     |     |     |     |     |
-// |  !  |  ^  |  =  |  _  |  $  |  ?  |   |     |     |     |     |     |     |
-// |  ~  |  <  |  |  |  -  |  >  |  *  |   |     |     |     |     |     |     |
-//                   |  %  |  :  |  @  |   |     |     |     |
-   &kp HASH  &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &kp AMPS      &trans &trans &trans &trans &trans &trans
-   &kp EXCL  &kp CARET &kp EQUAL &kp UNDER &kp DLLR  &kp QMARK     &trans &trans &trans &trans &trans &trans
-   &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT    &kp STAR      &trans &trans &trans &trans &trans &trans
-                                 &kp PRCNT &kp COLON &kp AT     &trans &trans &trans
+// |  #  |  ~  |  &  |  !  |  ?  |  &  |   |     |     |  {  |  }  |     |     |
+// |  !  |  ^  |  =  |  _  |  $  |  +  |   |     |     |  (  |  )  |     |     |
+// |  ~  |  <  |  |  |  -  |  >  |  *  |   |     |     |  [  |  ]  |     |     |
+//                   |  %  |  :  |  @  |   |     |     |     |     |
+   &kp HASH  &kp TILDE &kp AMPS  &kp EXCL  &kp QMARK &kp AMPS      &trans &kp LBRC &kp RBRC &trans &trans &trans
+   &kp EXCL  &kp CARET &kp EQUAL &kp UNDER &kp DLLR  &kp PLUS      &trans &kp LPAR &kp RPAR &trans &trans &trans
+   &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT    &kp STAR      &trans &kp LBKT &kp RBKT &trans &trans &trans
+                                 &kp PRCNT &kp COLON &kp AT        &trans &trans   &trans
                         >;
                 };
                 lower_layer {
