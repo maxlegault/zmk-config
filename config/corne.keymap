@@ -9,7 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <200>;
+	quick-tap-ms = <120>;
+	hold-trigger-on-release;
 };
 
 / {
@@ -17,7 +19,7 @@
                 td0: tap_dance_0 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        //tapping-term-ms = <150>;
+                        tapping-term-ms = <200>;
                         bindings = <&mo 3>, <&caps_word>;
                 };
         };
@@ -45,10 +47,10 @@
 // |     |     | LEFT | DOWN | RGHT |     |   |  H  |  J  |  K  |  L  |     |    |
 // |     |     |      |      |      |     |   |     |     |     |     |     |    |
 //                    |      |      |     |   |     |     |     |
-   &trans &trans &trans   &kp UP   &trans    &trans     &trans &kp PG_DN &kp PG_UP &kp HOME &kp END &trans
-   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans     &kp H  &kp J     &kp K     &kp L    &trans  &trans
-   &trans &trans &trans   &trans   &trans    &trans     &trans &trans    &trans    &trans   &trans  &trans
-                          &trans   &trans    &trans     &trans &trans    &trans
+   &trans &trans &trans        &kp UP        &trans          &trans     &trans &kp PG_DN   &kp PG_UP  &kp HOME   &kp END &trans
+   &trans &trans &mt LALT LEFT &mt LGUI DOWN &mt LSHFT RIGHT &trans     &kp H  &mt RSHFT J &mt RGUI K &mt RALT L &trans  &trans
+   &trans &trans &trans        &trans        &trans          &trans     &trans &trans      &trans     &trans     &trans  &trans
+                               &trans        &trans          &trans     &trans &trans      &trans
                         >;
                 };
                 number_layer {
