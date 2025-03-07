@@ -8,12 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&mt {
-    tapping-term-ms = <150>;
-	quick-tap-ms = <0>;
-	//hold-trigger-on-release;
-};
-
 / {
         behaviors {
                 td0: tap_dance_0 {
@@ -25,8 +19,10 @@
 				hm: homerow_mods {
 					compatible = "zmk,behavior-hold-tap";
 					#binding-cells = <2>;
-					tapping-term-ms = <150>;
-					quick-tap-ms = <0>;
+					hold-trigger-on-release; // wait for other home row mods
+					tapping-term-ms = <200>;
+					quick-tap-ms = <350>;
+					require-prior-idle-ms = <200>;
 					flavor = "tap-preferred";
 					bindings = <&kp>, <&kp>;
 				};
@@ -43,7 +39,7 @@
 //                    | CAPW | DEL | BSPC |   | SPC | RET | TAB  |
                         bindings = <
    &kp TAB   &kp Q       &kp W      &kp F      &kp P       &kp B          &kp J       &kp L       &kp U      &kp Y      &kp SEMI    &kp MINUS
-   &kp ESC   &mt LCTRL A &mt LALT R &mt LGUI S &mt LSHFT T &kp G          &kp M       &mt RSHFT N &mt RGUI E &mt RALT I &mt RCTRL O &kp SQT
+   &kp ESC   &hm LCTRL A &hm LALT R &hm LGUI S &hm LSHFT T &kp G          &kp M       &hm RSHFT N &hm RGUI E &hm RALT I &hm RCTRL O &kp SQT
    &kp GRAVE &kp Z       &kp X      &kp C      &kp D       &kp V          &kp K       &kp H       &kp COMMA  &kp DOT    &kp FSLH    &kp BSLH
                                     &td0       &lt 1 BSPC  &lt 2 DEL      &kp RET     &lt 4 SPACE &lt 5 TAB
                         >;
@@ -56,7 +52,7 @@
 // |     |     |      |      |      |     |   |     |     |     |     |     |    |
 //                    |      |      |     |   |     |     |     |
    &trans &trans &trans        &kp UP        &trans          &trans     &trans &kp PG_DN   &kp PG_UP  &kp HOME   &kp END &trans
-   &trans &trans &mt LALT LEFT &mt LGUI DOWN &mt LSHFT RIGHT &trans     &kp H  &mt RSHFT J &mt RGUI K &mt RALT L &trans  &trans
+   &trans &trans &hm LALT LEFT &hm LGUI DOWN &hm LSHFT RIGHT &trans     &kp H  &hm RSHFT J &hm RGUI K &hm RALT L &trans  &trans
    &trans &trans &trans        &trans        &trans          &trans     &trans &trans      &trans     &trans     &trans  &trans
                                &trans        &trans          &trans     &trans &trans      &trans
                         >;
@@ -95,7 +91,7 @@
 // |  ~  |  <  |  |  |  -  |  >  |  *  |   |     |     |  [  |  ]  |     |     |
 //                   |  %  |  :  |  @  |   |     |     |     |     |
    &kp HASH  &kp TILDE &kp AMPS  &kp EXCL  &kp QMARK &kp AMPS      &trans &kp LBRC &kp RBRC &trans &trans &trans
-   &kp EXCL  &kp CARET &kp EQUAL &kp UNDER &kp DLLR  &kp PLUS      &trans &kp LPAR &kp RPAR &trans &trans &trans
+   &kp EXCL  &kp CARET &kp EQUAL &kp UNDER &kp DLLR  &kp PLUS      &trans &hm RSHFT LPAR &hm RGUI RPAR &trans &trans &trans
    &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT    &kp STAR      &trans &kp LBKT &kp RBKT &trans &trans &trans
                                  &kp PRCNT &kp COLON &kp AT        &trans &trans   &trans
                         >;
