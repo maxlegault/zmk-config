@@ -10,84 +10,12 @@
 
 / {
         behaviors {
-				td_a: tap_dance_a {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&hm LCTRL A>, <&kp A>;
-				};
-				td_r: tap_dance_r {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&hm LALT R>, <&kp R>;
-				};
-				td_s: tap_dance_s {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&hm LGUI S>, <&kp S>;
-				};
-				td_t: tap_dance_t {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&hm LSHFT T>, <&kp T>;
-				};
-				td_n: tap_dance_n {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&hm RSHFT N>, <&kp N>;
-				};
-				td_e: tap_dance_e {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&hm RGUI E>, <&kp E>;
-				};
-				td_i: tap_dance_i {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&hm RALT I>, <&kp I>;
-				};
-				td_o: tap_dance_o {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&hm RCTRL O>, <&kp O>;
-				};
-                td_caps_word: tap_dance_caps_word {
+                td0: tap_dance_0 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&mo 3>, <&caps_word>;
                 };
-				td_bspc: tap_dance_bspc {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&lt 1 BSPC>, <&kp BSPC>;
-				};
-				td_del: tap_dance_del {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&lt 2 DEL>, <&kp DEL>;
-				};
-				td_spc: tap_dance_spc {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&lt 4 SPACE>, <&kp SPACE>;
-				};
-				td_tab: tap_dance_tab {
-					compatible = "zmk,behavior-tap-dance";
-					#binding-cells = <0>;
-					tapping-term-ms = <200>;
-					bindings = <&lt 5 TAB>, <&kp TAB>;
-				};
 				hm: homerow_mods {
 					compatible = "zmk,behavior-hold-tap";
 					#binding-cells = <2>;
@@ -106,14 +34,14 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  F   |  P  |  B   |   |  J  |  L  |  I   |  Y  |  ;  |  -  |
-// |  ESC |  A  |  R  |  S   |  T  |  G   |   |  M  |  N  |  E   |  I  |  O  |  '  |
+// |  ESC |  A  |  R  |  S   |  T  |  G   |   |  M  |  J  |  E   |  I  |  O  |  '  |
 // | SHFT |  Z  |  X  |  C   |  D  |  V   |   |  K  |  H  |  ,   |  .  |  /  |  \  |
 //                    | CAPW | DEL | BSPC |   | SPC | RET | TAB  |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp B          &kp J &kp L &kp U     &kp Y   &kp SEMI &kp MINUS
-   &kp ESC   &td_a &td_r &td_s &td_t &kp G          &kp M &td_n &td_e     &td_i   &td_o    &kp SQT
-   &kp GRAVE &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp BSLH
-            &td_caps_word &td_bspc &td_del          &kp RET &td_spc &td_tab
+   &kp TAB   &kp Q       &kp W      &kp F      &kp P       &kp B          &kp J       &kp L       &kp U      &kp Y      &kp SEMI    &kp MINUS
+   &kp ESC   &hm LCTRL A &hm LALT R &hm LGUI S &hm LSHFT T &kp G          &kp M       &hm RSHFT N &hm RGUI E &hm RALT I &hm RCTRL O &kp SQT
+   &kp GRAVE &kp Z       &kp X      &kp C      &kp D       &kp V          &kp K       &kp H       &kp COMMA  &kp DOT    &kp FSLH    &kp BSLH
+                                    &td0       &lt 1 BSPC  &lt 2 DEL      &kp RET     &lt 4 SPACE &lt 5 TAB
                         >;
                 };
                 navigation_layer {
