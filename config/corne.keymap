@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keypos_def/corne.dtsi"
 #include "layout/homerowmods.dtsi"
-#define HOST_OS 2
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/french.dtsi"
 
@@ -55,14 +54,14 @@
                 number_layer {
                         bindings = <
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     |  7  |  8  |  9  |     |    |
-// |     |     |     |     |     |     |   |     |  4  |  5  |  6  |     |    |
-// |     |     |     |     |     |     |   |     |  1  |  2  |  3  |     |    |
-//                   |     |     |     |   |     |  0  |     |
-   &trans &trans &trans &trans &trans &trans     &trans &kp N7 &kp N8 &kp N9 &trans &trans
-   &trans &trans &trans &trans &trans &trans     &trans &kp N4 &kp N5 &kp N6 &trans &trans
-   &trans &trans &trans &trans &trans &trans     &trans &kp N1 &kp N2 &kp N3 &trans &trans
-                        &trans &trans &trans     &trans &kp N0 &trans
+// |     |     |     |     |     |     |   |  +  |  7  |  8  |  9  |  =  |    |
+// |     |     |     |     |     |     |   |  -  |  4  |  5  |  6  |  -  |    |
+// |     |     |     |     |     |     |   |  .  |  1  |  2  |  3  |  .  |    |
+//                   |     |     |     |   |  0  |     |     |
+   &trans &trans &trans &trans &trans &trans     &kp PLUS  &kp N7 &kp N8 &kp N9 &kp EQUAL &trans
+   &trans &trans &trans &trans &trans &trans     &kp MINUS &kp N4 &kp N5 &kp N6 &kp MINUS &trans
+   &trans &trans &trans &trans &trans &trans     &kp DOT   &kp N1 &kp N2 &kp N3 &kp DOT   &trans
+                        &trans &trans &trans     &kp N0    &trans &trans
                         >;
                 };
                 function_layer {
@@ -81,27 +80,27 @@
                 symbol_layer {
                         bindings = <
 // -----------------------------------------------------------------------------------------
-// |  #  |  ~  |  &  |  !  |  ?  |  &  |   |     |     |  {  |  }  |     |     |
-// |  !  |  ^  |  =  |  _  |  $  |  +  |   |     |     |  (  |  )  |     |     |
-// |  ~  |  <  |  |  |  -  |  >  |  *  |   |     |     |  [  |  ]  |     |     |
-//                   |  %  |  :  |  @  |   |     |     |     |     |
-   &kp HASH  &kp TILDE &kp AMPS  &kp EXCL  &kp QMARK &kp AMPS      &trans &kp  LBRC       &kp RBRC       &trans &trans &trans
-   &kp EXCL  &kp CARET &kp EQUAL &kp UNDER &kp DLLR  &kp PLUS      &trans &hmr RSHFT LPAR &hmr RGUI RPAR &trans &trans &trans
-   &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT    &kp STAR      &trans &kp  LBKT       &kp RBKT       &trans &trans &trans
-                                 &kp PRCNT &kp COLON &kp AT        &trans &trans &trans
+// |     |  [  |  {  |  }  |  ]  |  %  |   |     |  |  |  &  |  \  |     |     |
+// |  ^  |  (  |  :  |  =  |  )  |  $  |   |     |  +  |  -  |  /  |  *  |     |
+// |     |  <  |  !  |  -  |  >  |  ?  |   |     |  `  |  ~  |     |     |     |
+//                   |     |  @  |  _  |   |     |     |     |     |
+   &trans    &kp LBKT &kp LBRC  &kp RBRC  &kp RBKT &kp PRCNT      &trans &kp PIPE        &kp AMPS        &kp BSLH       &trans          &trans
+   &kp CARET &kp LPAR &kp COLON &kp EQUAL &kp RPAR &kp DLLR       &trans &hmr RSHFT PLUS &hmr RGUI MINUS &hmr RALT FSLH &hmr RCTRL STAR &trans
+   &trans    &kp LT   &kp EXCL  &kp MINUS &kp GT   &kp QMARK      &trans &kp GRAVE       &kp TILDE       &trans         &trans          &trans
+                                     &trans &kp AT &kp UNDER      &trans &trans &trans
                         >;
                 };
                 accents_layer {
                         bindings = <
 // -----------------------------------------------------------------------------------------
-// |     |  æ  |  â  |  à  |  î  |  ï  |   |     |     |     |     |     |     |
-// |     |  ë  |  ê  |  è  |  é  |  ç  |   |     |     |     |     |     |     |
-// |  ÿ  |  ü  |  û  |  ù  |  ô  |  œ  |   |     |     |     |     |     |     |
+// |     |  ï  |  â  |  î  |  à  |  æ  |   |     |     |     |     |     |     |
+// |  ÿ  |  ë  |  ê  |  é  |  è  |  ç  |   |     |     |     |     |     |     |
+// |     |  ü  |  û  |  ô  |  ù  |  œ  |   |     |     |     |     |     |     |
 //                   |     |     |     |   |     |     |     |
-   &trans          &fr_ae          &fr_a_circumflex &fr_a_grave &fr_i_circumflex &fr_i_diaeresis     &trans &trans &trans &trans &trans &trans
-   &trans          &fr_e_diaeresis &fr_e_circumflex &fr_e_grave &fr_e_acute      &fr_c_cedilla       &trans &trans &trans &trans &trans &trans
-   &fr_y_diaeresis &fr_u_diaeresis &fr_u_circumflex &fr_u_grave &fr_o_circumflex &fr_oe              &trans &trans &trans &trans &trans &trans
-                                                                            &trans &trans &trans     &trans &trans &trans
+   &trans          &fr_i_diaeresis &fr_a_circumflex &fr_i_circumflex &fr_a_grave &fr_ae              &trans &trans &trans &trans &trans &trans
+   &fr_y_diaeresis &fr_e_diaeresis &fr_e_circumflex &fr_e_acute      &fr_e_grave &fr_c_cedilla       &trans &trans &trans &trans &trans &trans
+   &trans          &fr_u_diaeresis &fr_u_circumflex &fr_o_circumflex &fr_u_grave &fr_oe              &trans &trans &trans &trans &trans &trans
+                                                                          &trans &trans &trans       &trans &trans &trans
                         >;
                 };
                 lower_layer {
@@ -109,7 +108,7 @@
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
@@ -119,3 +118,5 @@
                 };
         };
 };
+
+
