@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keypos_def/corne.dtsi"
 #include "layout/homerowmods.dtsi"
+#define HOST_OS 2
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/french.dtsi"
 
