@@ -22,6 +22,11 @@
 #define ACCENT 5
 #define MAGIC 6
 
+// MoErgo specific rgb command
+// https://github.com/moergo-sc/zmk/blob/faf11f929a65a12a688b481cbe333eda1fd83a77/app/include/dt-bindings/zmk/rgb.h
+#define RGB_STATUS_CMD 15
+#define RGB_STATUS RGB_STATUS_CMD 0
+
 / {
 	behaviors {
 		td0: tap_dance_0 {
@@ -47,7 +52,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&rgb_ug RGB_TOG>;
+                = <&rgb_ug RGB_STATUS>;
         };
 
         bt_0: bt_profile_macro_0 {
