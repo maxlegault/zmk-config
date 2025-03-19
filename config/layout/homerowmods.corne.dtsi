@@ -1,0 +1,21 @@
+/ {
+  behaviors {
+    // The firs behavior is for homerow mods that are NOT the shift key, so
+    // we're free to use the `require-prior-idle-ms` property
+    DEFINE_HRM(hml, home_row_mod_left, &kp, &kp, KEYS_R THUMBS,
+      require-prior-idle-ms = <100>;
+    );
+    DEFINE_HRM(hmr, home_row_mod_right, &kp, &kp, KEYS_L THUMBS,
+      require-prior-idle-ms = <100>;
+    );
+
+    // Then, we have to define a behavior like the one before, but for the shift
+    // key, which means we cannot use the `require-prior-idle-ms` property
+    DEFINE_HRM(hsl, home_row_mod_for_shift_left, &kp, &kp, KEYS_R THUMBS);
+    DEFINE_HRM(hsr, home_row_mod_for_shift_right, &kp, &kp, KEYS_L THUMBS);
+
+    // Lastly, we need a home-row mod type of behavior that work with layers
+    DEFINE_HRM(hll, home_row_layer_mod_left, &mo, &kp, KEYS_R THUMBS LB3 LB2 LB1);
+    DEFINE_HRM(hlr, home_row_layer_mod_right, &mo, &kp, KEYS_L THUMBS RB3 RB2 RB1);
+  };
+};
