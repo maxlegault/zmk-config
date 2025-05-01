@@ -30,14 +30,14 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F   |  P  |  B   |   |  J  |  L  |  U   |  Y  |  ;  |  -  |
-// |  ESC |  A  |  R  |  S   |  T  |  G   |   |  M  |  N  |  E   |  I  |  O  |  '  |
-// | SHFT |  Z  |  X  |  C   |  D  |  V   |   |  K  |  H  |  ,   |  .  |  /  |  \  |
+// | TAB |  Q  |  W  |  F   |  P  |  B   |   |  J  |  L  |  U   |  Y  |  ;  |  -  |
+// | ESC |  A  |  R  |  S   |  T  |  G   |   |  M  |  N  |  E   |  I  |  O  |  '  |
+// | TYP |  Z  |  X  |  C   |  D  |  V   |   |  K  |  H  |  ,   |  .  |  /  |  \  |
 //                    | CAPW | DEL | BSPC |   | SPC | RET | TAB  |
                         bindings = <
    &kp TAB   &kp Q       &kp W       &kp F        &kp P        &kp B          &kp J       &kp L        &kp U        &kp Y       &kp SEMI    &kp MINUS
    &kp ESC   &hml LGUI A &hml LALT R &hml LCTRL S &hsl LSHFT T &kp G          &kp M       &hsr RSHFT N &hmr RCTRL E &hmr RALT I &hmr RGUI O &kp SQT
-   &kp GRAVE &kp Z       &kp X       &kp C        &kp D        &kp V          &kp K       &kp H        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
+   &to 7     &kp Z       &kp X       &kp C        &kp D        &kp V          &kp K       &kp H        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
                                          &td0 &hll 2 DEL &hll 1 BSPC          &hlr 4 SPACE &hlr 5 RET &hlr 6 TAB
                         >;
                 };
@@ -117,6 +117,19 @@
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                                         &trans       &trans       &trans         &trans   &trans   &trans
+                        >;
+                };
+                typing_layer {
+// -----------------------------------------------------------------------------------------
+// | DEF |  Q  |  W  |  F   |  P  |  B   |   |  J  |  L  |  U   |  Y  |  ;  |  -  |
+// | ALT |  A  |  R  |  S   |  T  |  G   |   |  M  |  N  |  E   |  I  |  O  |  '  |
+// | SHF |  Z  |  X  |  C   |  D  |  V   |   |  K  |  H  |  ,   |  .  |  /  | SHF |
+//                    | GUI | DEL | BSPC |   | SPC | RET | TAB  |
+                        bindings = <
+   &to 1     &kp Q &kp W &kp F &kp P &kp B          &kp J &kp L &kp U     &kp Y   &kp SEMI &kp MINUS
+   &kp LALT  &kp A &kp R &pk S &kp T &kp G          &kp M &kp N &kp E     &kp I   &kp O    &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+           &kp LGUI &hll 2 DEL &hll 1 BSPC          &hlr 4 SPACE &hlr 5 RET &hlr 6 TAB
                         >;
                 };
         };
