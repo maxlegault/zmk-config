@@ -30,14 +30,14 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F   |  P  |  B   |   |  J  |  L  |  I   |  Y  |  ;  |  -  |
-// |  ESC |  A  |  R  |  S   |  T  |  G   |   |  M  |  J  |  E   |  I  |  O  |  '  |
+// |  TAB |  Q  |  W  |  F   |  P  |  B   |   |  J  |  L  |  U   |  Y  |  ;  |  -  |
+// |  ESC |  A  |  R  |  S   |  T  |  G   |   |  M  |  N  |  E   |  I  |  O  |  '  |
 // | SHFT |  Z  |  X  |  C   |  D  |  V   |   |  K  |  H  |  ,   |  .  |  /  |  \  |
 //                    | CAPW | DEL | BSPC |   | SPC | RET | TAB  |
                         bindings = <
-   &kp TAB   &kp Q        &kp W       &kp F       &kp P        &kp B          &kp J       &kp L        &kp U       &kp Y       &kp SEMI     &kp MINUS
-   &kp ESC   &hml LCTRL A &hml LALT R &hml LGUI S &hsl LSHFT T &kp G          &kp M       &hsr RSHFT N &hmr RGUI E &hmr RALT I &hmr RCTRL O &kp SQT
-   &kp GRAVE &kp Z        &kp X       &kp C       &kp D        &kp V          &kp K       &kp H        &kp COMMA   &kp DOT     &kp FSLH     &kp BSLH
+   &kp TAB   &kp Q       &kp W       &kp F        &kp P        &kp B          &kp J       &kp L        &kp U        &kp Y       &kp SEMI    &kp MINUS
+   &kp ESC   &hml LGUI A &hml LALT R &hml LCTRL S &hsl LSHFT T &kp G          &kp M       &hsr RSHFT N &hmr RCTRL E &hmr RALT I &hmr RGUI O &kp SQT
+   &kp GRAVE &kp Z       &kp X       &kp C        &kp D        &kp V          &kp K       &kp H        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
                                          &td0 &hll 2 DEL &hll 1 BSPC          &hlr 4 SPACE &hlr 5 RET &hlr 6 TAB
                         >;
                 };
@@ -48,10 +48,10 @@
 // |     |     | LEFT | DOWN | RGHT |     |   |  H  |  J  |  K  |  L  |     |    |
 // |     |     |      |      |      |     |   |     |     |     |     |     |    |
 //                    |      |      |     |   |     |     |     |
-   &trans &trans &trans         &kp UP         &trans           &trans     &trans &kp PG_DN    &kp PG_UP   &kp HOME    &kp END &trans
-   &trans &trans &hml LALT LEFT &hml LGUI DOWN &hsl LSHFT RIGHT &trans     &kp H  &hsr RSHFT J &hmr RGUI K &hmr RALT L &trans  &trans
-   &trans &trans &trans         &trans         &trans           &trans     &trans &trans       &trans      &trans      &trans  &trans
-                                &trans         &trans           &trans     &trans &trans       &trans
+   &trans &trans &trans         &kp UP          &trans           &trans     &trans &kp PG_DN    &kp PG_UP    &kp HOME    &kp END &trans
+   &trans &trans &hml LALT LEFT &hml LCTRL DOWN &hsl LSHFT RIGHT &trans     &kp H  &hsr RSHFT J &hmr RCTRL K &hmr RALT L &trans  &trans
+   &trans &trans &trans         &trans          &trans           &trans     &trans &trans       &trans       &trans      &trans  &trans
+                                &trans          &trans           &trans     &trans &trans       &trans
                         >;
                 };
                 number_layer {
@@ -87,9 +87,9 @@
 // |  ^  |  (  |  :  |  =  |  )  |  $  |   |     |  +  |  -  |  /  |  *  |     |
 // |     |  <  |  !  |  -  |  >  |  ?  |   |     |  `  |  ~  |     |     |     |
 //                   |     |  @  |  _  |   |     |     |     |     |
-   &kp HASH  &kp LBKT &kp LBRC  &kp RBRC  &kp RBKT &kp PRCNT      &trans &kp PIPE        &kp AMPS        &kp BSLH       &trans          &trans
-   &kp CARET &kp LPAR &kp COLON &kp EQUAL &kp RPAR &kp DLLR       &trans &hmr RSHFT PLUS &hmr RGUI MINUS &hmr RALT FSLH &hmr RCTRL STAR &trans
-   &trans    &kp LT   &kp EXCL  &kp MINUS &kp GT   &kp QMARK      &trans &kp GRAVE       &kp TILDE       &trans         &trans          &trans
+   &kp HASH  &kp LBKT &kp LBRC  &kp RBRC  &kp RBKT &kp PRCNT      &trans &kp PIPE        &kp AMPS         &kp BSLH       &trans         &trans
+   &kp CARET &kp LPAR &kp COLON &kp EQUAL &kp RPAR &kp DLLR       &trans &hmr RSHFT PLUS &hmr RCTRL MINUS &hmr RALT FSLH &hmr RGUI STAR &trans
+   &trans    &kp LT   &kp EXCL  &kp MINUS &kp GT   &kp QMARK      &trans &kp GRAVE       &kp TILDE        &trans         &trans         &trans
                                      &trans &kp AT &kp UNDER      &trans &trans &trans
                         >;
                 };
