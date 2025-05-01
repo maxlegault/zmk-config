@@ -127,7 +127,7 @@
 //                    | GUI | DEL | BSPC |   | SPC | RET | TAB  |
                         bindings = <
    &to 1     &kp Q &kp W &kp F &kp P &kp B          &kp J &kp L &kp U     &kp Y   &kp SEMI &kp MINUS
-   &kp LALT  &kp A &kp R &pk S &kp T &kp G          &kp M &kp N &kp E     &kp I   &kp O    &kp SQT
+   &kp LALT  &kp A &kp R &kp S &kp T &kp G          &kp M &kp N &kp E     &kp I   &kp O    &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp RSHFT
            &kp LGUI &hll 2 DEL &hll 1 BSPC          &hlr 4 SPACE &hlr 5 RET &hlr 6 TAB
                         >;
